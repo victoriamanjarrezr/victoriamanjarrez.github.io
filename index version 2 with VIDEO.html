@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Victoria Manjarrez - Home</title>
+  <!-- Link to your CSS -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Typed.js from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+<body>
+  <!-- WHITE TOP NAV BAR -->
+  <header class="site-header">
+    <div class="nav-container">
+      <div class="brand">
+        <a href="index.html">Victoria Manjarrez</a>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="CV.html">CV</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION WITH ENGINEERING FOCUS -->
+<!-- HERO SECTION WITH DYNAMIC BACKGROUND -->
+<section class="hero-section">
+  <!-- NEW: Fullscreen background video -->
+  <video autoplay loop muted playsinline class="hero-video">
+    <source src="images/VIDEO.mp4" type="video/mp4">
+    <!-- Fallback text -->
+    Your browser does not support HTML5 video.
+  </video>
+  <!-- NEW: Dark overlay to enhance text readability -->
+  <div class="video-overlay"></div>
+  <div class="hero-content">
+    <h1>Hi, I'm <span class="highlight">Victoria Manjarrez</span></h1>
+    <h2>I'm a <strong>Mechatronics Engineer</strong></h2>
+    <a href="#about" class="hero-button">Learn More About Me</a>
+  </div>
+</section>
+
+
+  <!-- ABOUT ME SECTION WITH PHOTO NEXT TO TEXT -->
+  <main class="home-about">
+    <div class="about-container">
+      <!-- Left column: Photo -->
+      <div class="about-img">
+        <img src="images/Victoria.jpg" alt="Victoria Manjarrez" />
+      </div>
+      <!-- Right column: Text -->
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+          I’m a mechatronics engineer with a diverse background in mechanical and electrical engineering of additive manufacturing systems, nanoatellites, and autonomous vehicles. Driven by a lifelong fascination with aerospace and astronomy, I strive to push the boundaries of this technology while prioritizing humanity’s collective well-being.
+        </p>
+        <p>
+          For me, engineering is about turning intention into tangible impact. I'm here to learn, create, and make life more meaningful.
+        </p>
+        <p>
+          Feel free to explore my Research, Publications, and other pages above to learn more about my work.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- BLACK FOOTER -->
+  <footer class="site-footer">
+    <p>&copy; 2023 Victoria Manjarrez. All rights reserved.</p>
+  </footer>
+
+  <!-- TYPED.JS INITIALIZATION -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      new Typed(".typed-text", {
+        strings: [
+          "Mechatronics Engineer",
+          "Researcher"
+        ],
+        typeSpeed: 60,
+        backSpeed: 40,
+        backDelay: 1500,
+        loop: true
+      });
+    });
+  </script>
+</body>
+</html>

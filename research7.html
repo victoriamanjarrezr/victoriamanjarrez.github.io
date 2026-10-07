@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title> Hydrogel Microstructure Measurement with Computer vision and Machine learning - Research Detail</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- WHITE NAV BAR -->
+  <header class="site-header">
+    <div class="nav-container"> 
+      <div class="brand">
+        <a href="index.html">Victoria Manjarrez</a>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="research.html" class="active">Research</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="CV.html">CV</a></li>
+          
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- RESEARCH DETAIL CONTENT -->
+  <main class="research-detail">
+    <h2>Hydrogel Microstructure Measurement</h2>
+    
+   
+    <!-- Project Date/Duration -->
+    <p class="research-date"> Date: 2025 </p>
+
+    <!-- Project Overview -->
+    <p>
+    In the lab, researchers typically use software like ImageJ/Fiji to manually measure the porosity and size of hydrogels. 
+    However, this process is time-consuming and makes it difficult to process large datasets 
+
+    </p>
+
+    <p>
+    In this project, an algorithm was developed to replace the manual software analysis, automating the image processing 
+    and feature extraction with the objective of guiding the next generation design of hydrogels for tissue engineering 
+    applications.
+    </p>
+    
+          
+<!-- Detailed Project Description Section -->
+<section class="research-description">
+  <h3>Computer Vision</h3>
+  <p>
+     Using OpenCV and scikit-image, a computer vision algorithm capable of detecting pores (non-perfect circles) from hydrogel microscope images. The algorithm converts images to grayscale and applies adaptive thresholding to create binary images. Then, it uses morphological operations to remove noise and separate touching pores, and detects individual pores using contour detection.
+  </p>
+  <p>
+    For each pore detected, the algorithm extracts 7 morphological features: <u>area, perimeter, equivalent diameter, circularity (where 1 equals a perfect circle), aspect ratio, eccentricity, and solidity. </u>
+  </p>
+</section>
+
+  <div class="viz-itemR7">
+    <img src="images/hydrogel_img1_results.png"
+         alt="n = 1000"
+         class="viz-imgR7" />
+    <p class="viz-captionR7">Figure 1. Size vs Circularity</p>
+  </div>
+</div>
+
+
+
+
+<!-- Machine Learning Section -->
+<section class="research-description">
+  <h3>Machine learning</h3>
+  <p>
+    After extracting features from the pores, two different machine learning models were applied to analyze and classify the microstructure:
+  </p>
+
+  <h4>K-Means Clustering and Random Forest</h4>
+  <p>
+    Using scikit-learn, K-Means clustering classified pores into 4 types (large circular, medium semi-circular, large irregular), while Random Forest predicted pore quality with 98.3% accuracy based on morphological characteristics. For this demonstration, synthetic quality labels were used, but the model can be trained with real laboratory measurements for improved accuracy.
+
+  </p>
+
+  <!-- KMEANS CLUSTERING IMAGES  -->
+
+<div class="viz-row">
+  <div class="viz-item">
+    <img src="images/final_02_pca_visualization.png"
+         alt="n = 400"
+         class="viz-img" />
+    <p class="viz-caption">Figure 3. Medium environment, n = 400.</p>
+</div>
+
+<div class="viz-item">
+    <img src="images/final_03_pie_chart.png"
+         alt="n = 1000"
+         class="viz-img" />
+    <p class="viz-caption">Figure 1. Size vs Circularity</p>
+  </div>
+</div>
+
+
+
+<!-- RANDOM FOREST IMAGES -->
+
+<div class="viz-row">
+  <div class="viz-item">
+    <img src="images/paper_04_rf_feature_importance.png"
+         alt="n = 400"
+         class="viz-img" />
+    <p class="viz-caption">Figure 3. Medium environment, n = 400.</p>
+</div>
+
+<div class="viz-item">
+    <img src="images/paper_03_rf_confusion_matrix.png"
+         alt="n = 1000"
+         class="viz-img" />
+    <p class="viz-caption">Figure 1. Size vs Circularity</p>
+  </div>
+</div>
+
+
+
+</section>
+
+
+    <!-- Main Detail Image }
+    <img src="images/CP2.png" alt="Cryogenic 3D Printing" class="research-detail-imgCP2" /> -->
+ 
+
+  <!-- BLACK FOOTER -->
+  <footer class="site-footer">
+    <p>&copy; 2023 Victoria Manjarrez. All rights reserved.</p>
+  </footer>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cryogenic 3D Printing - Research Detail</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- WHITE NAV BAR -->
+  <header class="site-header">
+    <div class="nav-container"> 
+      <div class="brand">
+        <a href="index.html">Victoria Manjarrez</a>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="research.html" class="active">Research</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="CV.html">CV</a></li>
+          
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- RESEARCH DETAIL CONTENT -->
+  <main class="research-detail">
+    <h2>Path planning under uncertainty</h2>
+    
+   
+    <!-- Project Date/Duration -->
+    <p class="research-date"> Date: 2025 </p>
+
+    <!-- Project Overview -->
+    <p>
+    When medical devices like steerable needles navigate through tissue, they don't follow perfect paths. Small variations in tissue properties and control inputs cause the needle to deviate from its intended trajectory. This project tackles that challenge by implementing a probabilistic planner that solves for this uncertainty. Rather than computing a single path that the needle is unlikely to follow exactly, we generate a policy that tells the needle what to do from any position it might end up in.
+           
+    </p>
+
+    <p>
+    In this project, the Stochastic Motion Roadmap (SMR) algorithm was implemented in C++ using OMPL and tested in two 2D environments with varying complexity. The results show that as we sample more states (n), the planner's success rate improves dramatically, reaching up to 81% in challenging scenarios filled with obstacles. 
+    </p>
+    
+
+<div class="viz-row">
+  <div class="viz-item">
+    <img src="images/visualization_config_simple_n400.png"
+         alt="n = 400"
+         class="viz-img" />
+    <p class="viz-caption">Figure 1. Simple environment, n = 400 .</p>
+  </div>
+
+  <div class="viz-item">
+    <img src="images/visualization_config_simple_n1000.png"
+         alt="n = 1000"
+         class="viz-img" />
+    <p class="viz-caption">Figure 2. Simple environment, n = 1000 .</p>
+  </div>
+</div>
+
+
+<div class="viz-row">
+  <div class="viz-item">
+    <img src="images/visualization_config_medium_n400.png"
+         alt="n = 400"
+         class="viz-img" />
+    <p class="viz-caption">Figure 3. Medium environment, n = 400.</p>
+  </div>
+
+  <div class="viz-item">
+    <img src="images/visualization_config_medium_n1000.png"
+         alt="n = 1000"
+         class="viz-img" />
+    <p class="viz-caption">Figure 4. Medium environment, n = 1000.</p>
+  </div>
+</div>
+
+
+          
+    <!-- Detailed Project Description Section -->
+    <section class="research-description">
+      <h3>Solution with SMRs</h3>
+    <p>
+       Using MDP helps us solve uncertainty because is a model for sequential decision making outcomes, meaning that it will evaluate the best possible action in each state. There are two distinct phases:
+       </p>
+       
+       <p>
+       Learning phase
+       </p>
+
+       <p>
+       A roadmap was built by randomly sampling positions across the workspace. From each position, we simulate needle movements under different steering angles and compute where the needle might end up. Since tissue interactions make motion uncertain, we model transitions between states as *P(s'|s,a)* - the probability of reaching state *s'* when taking action *a* from state *s*. This creates a graph that captures possible needle trajectories throughout the environment.
+       </p>
+
+       <p>
+       Query phase
+       </p>
+
+       <p>
+       The query phase happens when we need to navigate from a start position to a target. We use value iteration to work backward from the goal, calculating optimal values for each state: *V(s) = max_a Σ P(s'|s,a)V(s')*. This recursive computation finds the best action for every state in our roadmap. The resulting policy *π(s) = argmax_a Σ P(s'|s,a)V(s')* tells us which steering angle gives the best chance of reaching the target from any position. The needle can then adapt in real-time as it encounters unexpected tissue properties or control errors.
+       </p>
+      
+      <p>
+
+    <!-- Main Detail Image }
+    <img src="images/CP2.png" alt="Cryogenic 3D Printing" class="research-detail-imgCP2" /> -->
+ 
+
+  <!-- BLACK FOOTER -->
+  <footer class="site-footer">
+    <p>&copy; 2023 Victoria Manjarrez. All rights reserved.</p>
+  </footer>

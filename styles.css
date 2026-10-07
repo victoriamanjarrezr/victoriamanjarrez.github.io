@@ -1,0 +1,650 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+/* HEADER (WHITE NAV BAR) */
+.site-header {
+  background-color: #000000f4;
+  border-bottom: 1px solid #000000f4;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+/* Header brand: now stack image above the text */
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brand img.profile-pic {
+  width: 40px;           /* Adjust size as needed */
+  height: 40px;          /* Keeps it square */
+  border-radius: 50%;    /* Makes it circular */
+  margin-bottom: 5px;    /* Space below image before the name */
+  object-fit: cover;
+}
+
+.brand a {
+  font-size: 1.5rem;
+  color: #fdfdfd;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.main-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.main-nav a:hover {
+  color: #666;
+}
+
+.main-nav a.active {
+  color: #e74c3c; /* highlight active link if you like */
+}
+
+/* HERO SECTION */
+/* Ensure the brand container displays the profile picture and name side-by-side */
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.brand img.profile-pic {
+  width: 40px;           /* Adjust size as needed */
+  height: 40px;          /* Square aspect ratio */
+  border-radius: 50%;    /* Circular shape */
+  margin-right: 10px;    /* Spacing between image and text */
+  object-fit: cover;
+}
+
+/* HERO SECTION */
+
+/* HERO SECTION: Keep existing styles for video and overlay unchanged */
+.hero-section {
+  position: relative;
+  height: 70vh; /* Adjust height as needed */
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5); /* Adjust darkness as needed */
+  z-index: 2;
+}
+
+/* Updated container: stacking items vertically */
+.hero-container {
+  position: relative;
+  z-index: 3; /* Sits above the video and overlay */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 2rem;
+}
+
+/* Updated hero image: remove right margin and add bottom spacing */
+.hero-image {
+  margin-bottom: 1.5rem; /* Space between image and text */
+}
+
+.hero-image img {
+  width: 250px;         /* Adjust size as needed */
+  height: 250px;        /* Adjust size as needed */
+  border-radius: 50%;   /* Makes the image circular */
+  object-fit: cover;
+  border: 3px solid #fff; /* Optional white border */
+}
+
+/* Hero text styling remains the same */
+.hero-text {
+  color: #fff; /* White text for contrast */
+  background: rgba(0, 0, 0, 0.689); /* Semi-transparent background for readability */
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+  max-width: 500px; /* Prevent text from stretching too wide */
+  text-align: center;
+}
+
+.hero-text h1,
+.hero-text h2 {
+  margin-bottom: 0.5rem;
+}
+
+.hero-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(45deg, #e74c3c, #f39c12);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hero-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Button styling */
+.hero-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(45deg, #e74c3c, #f39c12);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hero-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+/* NEW ADD */
+
+
+/* Reserve space for typed text to avoid shifting */
+.typed-text {
+  display: inline-block;
+  min-width: 250px; /* Adjust as needed */
+}
+
+.highlight {
+  color: #f90; /* highlight color */
+}
+
+/* HOME PAGE "ABOUT" SECTION */
+
+
+/* RESEARCH PAGE STYLES */
+.research-content {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/*Research main page title */
+.research-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-family: "Arial",  sans-serif;
+  text-decoration: underline;
+  text-decoration-thickness: 8%;
+  
+}
+
+.research-item {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  font-family: "Arial";
+  
+}
+
+.research-img {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.research-text h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.research-date {
+  color: #999;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+/* PUBLICATIONS PAGE STYLES */
+.publications-content {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.publications-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Layout: thumbnail on the left, details on the right */
+.pub-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+/* Thumbnail image */
+.pub-img {
+  width: 150px;   /* Adjust size as needed */
+  height: 200px;  /* Keep square */
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Text & button container */
+.pub-info {
+  flex: 1; /* Takes remaining space */
+}
+
+.pub-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* "Link to paper" button style */
+.pub-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  background-color: #e74c3c; /* Button color */
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.pub-link:hover {
+  background-color: #c0392b; /* Darker on hover */
+}
+
+/* FOOTER (BLACK) */
+.site-footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Research link styles */
+.research-link {
+  text-decoration: none;
+  color: inherit;
+}
+.research-link:hover .research-item {
+  background-color: #f0f0f0; /* Optional: change background on hover */
+}
+
+
+/* BULLET POINTS */
+ul ul {
+  margin-left: 20px;
+}
+
+/* ----------------------------- */
+/* NEW: Research Detail Page Styles */
+/* ----------------------------- */
+
+/* Container for research detail pages */
+.research-detail {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.research-detail h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Main image for research detail page */
+.research-detail-img {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 6px;
+}
+
+/* Image SPES2 for research detail page */
+.research-detail-img2 {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 6px;
+}
+
+/* Image SPES3 for research detail page */
+.research-detail-img3 {
+  width: 100%;
+  max-width: 700px;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 6px;
+}
+
+/* Image SPES4 for research detail page */
+.research-detail-img4 {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 6px;
+}
+
+/* Image SPES5 for research detail page */
+.research-detail-img5 {
+  width: 100%;
+  max-width: 700px;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 6px;
+}
+
+/* Image SPES6 for research detail page */
+.research-detail-img6 {
+  width: 100%;
+  max-width: 700px;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 6px;
+}
+
+
+/* IMPORTANT!!! Control the layout of the image rows */
+.viz-row {
+  display: flex;
+  justify-content: center; /* centradas horizontalmente */
+  align-items: flex-start; /* mejor para captions debajo */
+  gap: 30px;               /* espacio entre imágenes */
+  margin: 40px 0;
+}
+
+/* IMPORTANT!!! Control the size of the images */
+.viz-img {
+  width: 100%;        /* 👈 fill its container */
+  max-width: 360px;  /* 👈 controls final visual size */
+  height: auto;
+}
+
+
+/* Container for each image + caption */
+.viz-item {
+  width: 360px;      /* SAME as image max-width */
+  text-align: center;
+  
+}
+
+
+/* Caption style (paper-like) */
+.viz-caption {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: #333;
+  text-align: justify;
+  line-height: 1.4;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* IMPORTANT!!! Control the size of the images */
+.viz-imgR7 {
+  width: 100%;        /* 👈 fill its container */
+  max-width: 1000px;  /* 👈 controls final visual size */
+  height: auto;
+}
+
+
+/* Container for each image + caption */
+.viz-itemR7 {
+  width: 800px;      /* SAME as image max-width */
+  text-align: center;
+  
+}
+
+
+/* Caption style (paper-like) */
+.viz-captionR7 {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: #333;
+  text-align: justify;
+  line-height: 1.4;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* Paragraph formatting inside research section */
+.research-detail {
+  text-align: justify;
+  text-justify: inter-word;
+  margin-bottom: 0.6em;   /* gap between paragraphs */
+}
+
+/* Gap between lines throughout the text */
+.research-detail {
+  line-height: 1.6;
+}
+
+.research-description {
+  text-align: justify;
+  text-justify: inter-word;
+  margin-bottom: 0.6em;   /* gap between paragraphs */
+}
+
+/* Gap between lines throughout the text */
+.research-description {
+  line-height: 1.6;
+}
+
+
+
+
+
+/* Date styling for detail pages */
+.research-detail .research-date {
+  color: #999;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+/* Section for technical specifications (if any) */
+.research-specs {
+  margin-top: 2rem;
+}
+
+.research-specs h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.research-specs ul {
+  list-style: disc;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Section for detailed description */
+.research-description {
+  margin-top: 2rem;
+}
+
+/* Main image for research detail page */
+.research-detail-imgPR1 {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 6px;
+}
+
+/* Image SPES6 for research detail page */
+.research-detail-imgPR2 {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 6px;
+}
+
+/* Image SPES6 for research detail page */
+.research-detail-imgPR3 {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 6px;
+}
+
+/* Image AS1 for research detail page */
+.research-detail-imgAS1 {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 6px;
+}
+
+/* Image AS2 for research detail page */
+.research-detail-imgAS2 {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 6px;
+}
+
+/* Image HC1 for research detail page */
+.research-detail-imgHC1 {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 6px;
+}
+
+/* Image HC2 for research detail page */
+.research-detail-imgHC2 {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 6px;
+}
+
+/* Image HC2 for research detail page */
+.research-detail-imgHC3 {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 6px;
+}
+
+/* Image HC2 for research detail page */
+.research-detail-imgCP1 {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 6px;
+}
+
+/* Image HC2 for research detail page */
+.research-detail-imgCP2 {
+  width: 100%;
+  max-width: 300px;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 6px;
+}
+
+/* Image HC2 for research detail page */
+.research-detail-imgCP5 {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 6px;
+}
+
+
+/* Back link style */
+.back-link {
+  display: inline-block;
+  margin-top: 2rem;
+  color: #e74c3c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+
+.back-link:hover {
+  text-decoration: underline;
+}
